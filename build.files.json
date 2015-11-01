@@ -1,0 +1,17 @@
+{
+    "sass": [
+        "./assets/css/settings/**.*.{scss,sass,css}",
+        "./assets/css/*.{scss,sass,css}",
+        "./components/*/css/*.{scss,sass,css}"
+    ],
+    "js": [
+        "./assets/js/hask.js",
+        "./assets/js/jquery-*.js",
+        "./assets/js/$.*.js",
+        "./assets/js/*.js",
+        "./components/*/js/*.js"
+    ],
+    "img": [
+        "./assets/img/*.{gif,jpg,png,jpeg,svg}"
+    ]
+}
