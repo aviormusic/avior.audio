@@ -1,0 +1,20 @@
+@import '../../../assets/css/settings/colors';
+
+.component-navigation {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, .9);
+    z-index: 10;
+
+    img {
+        height: 40px;
+    }
+
+    .component-navigation-links {
+        line-height: 40px;
+    }
+}

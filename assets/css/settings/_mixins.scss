@@ -1,0 +1,95 @@
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+@mixin transition($prop, $timing, $easing) {
+    -webkit-transform: $prop $timing $easing;
+    -moz-transform: $prop $timing $easing;
+    -ms-transform: $prop $timing $easing;
+    -o-transform: $prop $timing $easing;
+    transform: $prop $timing $easing;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+    line-height: $size;
+    line-height: calculateRem($size);
+}
+
+@mixin background-image($name, $size: false){
+    background-image: url(#{$name}.svg);
+    @if($size){
+        background-size: $size;
+    }
+
+    .no-svg & {
+        background-image: url(#{$name}.#{$mxn-img-fallback-extension});
+
+        @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+            background-image: url(#{$name}#{$mxn-img-retina-suffix}.#{$mxn-img-fallback-extension});
+        }
+    }
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); // IE8
+}
+
+@mixin tablet {
+    @media only screen and (max-width: 700px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media only screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media only screen and (min-width: 1500px) {
+        @content;
+    }
+}

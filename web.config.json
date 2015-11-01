@@ -1,0 +1,18 @@
+{
+    "protocol": "http",
+    "host": "localhost",
+    "subdir": "avior.audio",
+    "port": "88",
+    "defaultIndexPage": "index",
+    "filetype": "php",
+    "redirect": "false",
+    "root": "./public/",
+    "error": "failed",
+    "langpath": "./translate/",
+    "appcache": "",
+    "langAlias": {
+        "en": "english",
+        "de": "german",
+        "default": "en"
+    }
+}

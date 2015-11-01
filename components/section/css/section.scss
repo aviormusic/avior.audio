@@ -1,0 +1,48 @@
+@import '../../../assets/css/settings/colors';
+@import '../../../assets/css/settings/typo';
+@import '../../../assets/css/settings/mixins';
+
+$section-fx-size: 100px;
+$section-padding: 50px;
+
+.component-section {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid $white; // HELPER DEBUG
+
+    &:not(.component-section--nospace) {
+        padding: $section-padding 0;
+    }
+
+    &:not(.component-section--nofx) {
+        /* &:before {
+            content: '';
+            position: absolute;
+            top: -#{$section-fx-size / 2};
+            height: $section-fx-size;
+            width: $section-fx-size;
+            left: calc(50% - #{$section-fx-size / 2});
+            transform: rotate(45deg);
+            background-color: rgba($white, .1);
+        } */
+    }
+
+    .section-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-title {
+        text-transform: uppercase;
+        text-align: center;
+        margin: ($section-fx-size / 2) 0;
+        border-bottom: 5px solid $white;
+        @include font-size(40px);
+        @include line-height(60px);
+
+        &:after {
+            @extend clearfix;
+        }
+    }
+}

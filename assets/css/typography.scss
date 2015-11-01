@@ -1,1 +1,19 @@
 @import 'settings/typo';
+@import 'settings/colors';
+@import 'settings/mixins';
+
+body {
+    font-family: $font-stack;
+    background-color: $black;
+    color: $white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
+p, a {
+    @include font-size(16px);
+    @include line-height(24px);
+    font-weight: 200;
+}

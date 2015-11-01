@@ -1,0 +1,17 @@
+.component-background-image {
+    z-index: 2;
+    background: transparent;
+    width: 100%;
+
+    .background-image {
+        background: transparent;
+        width: 100%;
+
+        &#c-bi-teaser-image {
+            height: 650px;
+            background: url('img/teaser/mixer-mac-blurry.jpg');
+            background-image: url('img/teaser/mixer-mac-blurry.jpg');
+            background-size: cover;
+        }
+    }
+}

@@ -1,7 +1,10 @@
 {
     "sass": [
         "./assets/css/settings/**.*.{scss,sass,css}",
-        "./assets/css/*.{scss,sass,css}",
+        "./assets/css/reset.scss",
+        "./assets/css/typography.scss",
+        "./assets/css/global.scss",
+        "./assets/css/elements.scss",
         "./components/*/css/*.{scss,sass,css}"
     ],
     "js": [

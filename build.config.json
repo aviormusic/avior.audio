@@ -1,4 +1,4 @@
 {
-    "name": "application",
+    "name": "app",
     "destination": "./public/"
 }

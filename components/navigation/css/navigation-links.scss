@@ -1,0 +1,14 @@
+.component-navigation-links {
+    color: inherit;
+    float: right;
+
+    li {
+        float: left;
+
+        a {
+            text-transform: uppercase;
+            display: block;
+            padding: 10px 20px;
+        }
+    }
+}

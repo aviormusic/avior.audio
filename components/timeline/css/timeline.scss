@@ -1,0 +1,57 @@
+@import '../../../assets/css/settings/colors';
+@import '../../../assets/css/settings/typo';
+@import '../../../assets/css/settings/mixins';
+
+$tl-circle-width: 15px;
+$tl-space-bordering: 25px;
+$tl-border-size: 5px;
+$tl-date-width: 180px;
+$tl-date-size: 14px;
+
+.component-timeline {
+    display: inline-block;
+    position: relative;
+    border-left: 5px solid $white;
+    margin-left: $tl-date-width;
+
+    .timeline-item {
+        position: relative;
+        padding-left: $tl-space-bordering;
+        margin-bottom: 45px;
+        margin-top: 35px;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            background-color: $white;
+            width: $tl-circle-width;
+            height: $tl-circle-width;
+            @include border-radius(#{$tl-circle-width / 2});
+            position: absolute;
+            left: -($tl-border-size * 2);
+            top: calc(50% - #{$tl-circle-width / 2});
+        }
+
+        h5 {
+            @include font-size(23px);
+            @include line-height(30px);
+        }
+
+        p {
+            @include font-size(14px);
+            @include line-height(20px);
+            font-weight: 100;
+        }
+
+        .date-time {
+            @include font-size($tl-date-size);
+            position: absolute;
+            left: -($tl-date-width + $tl-space-bordering);
+            top: calc(50% - #{$tl-date-size / 2});
+            width: $tl-date-width;
+            text-align: right;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+    }
+}
